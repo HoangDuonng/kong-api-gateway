@@ -1,0 +1,7 @@
+.env
+docker-compose.yml-e
+POSTGRES_PASSWORD
+.DS_Store
+Thumbs.db
+*.log
+.vscode/

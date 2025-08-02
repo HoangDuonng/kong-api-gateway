@@ -1,0 +1,461 @@
+_transform: false
+_format_version: "3.0"
+consumers:
+  - custom_id: ~
+    id: f85447cf-124c-4d29-a70d-b6b1024a47ef
+    username: token_server
+    tags:
+      - jwt
+      - token
+    created_at: 1754143539
+    updated_at: 1754143539
+parameters:
+  - value: dadf5c95-c531-473e-abe9-46affbc30868
+    created_at: ~
+    key: cluster_id
+services:
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: 0929d3ca-7920-4c59-885f-7627bb7b751c
+    tags:
+      - booking
+      - api-backend
+    name: booking-service
+    updated_at: 1753946019
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 8084
+    ca_certificates: ~
+    created_at: 1753945980
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: 61d2a659-5240-4b05-b070-8890526290b5
+    tags:
+      - chatbot
+      - api-backend
+    name: chatbot-service
+    updated_at: 1753946346
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 5000
+    ca_certificates: ~
+    created_at: 1753946346
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: 70358580-7171-41af-8996-1a0bc9582e9a
+    tags:
+      - auth
+      - api-backend
+    name: auth-service
+    updated_at: 1754142832
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: /api/auth
+    port: 8081
+    ca_certificates: ~
+    created_at: 1753945890
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: a2320f4b-c669-4103-b066-d66b3110e1b3
+    tags:
+      - cms
+      - api-backend
+    name: cms-service
+    updated_at: 1754142650
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: /api/layouts
+    port: 8086
+    ca_certificates: ~
+    created_at: 1753946045
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: b117b3f7-e708-448e-981a-95dff30b577c
+    tags:
+      - authorization
+      - api-backend
+    name: authorization-service
+    updated_at: 1753945738
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 8082
+    ca_certificates: ~
+    created_at: 1753945738
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: b3842a14-c43b-43ee-bf67-9b91552d5bf4
+    tags:
+      - payment
+      - api-backend
+    name: payment-service
+    updated_at: 1753946188
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 8085
+    ca_certificates: ~
+    created_at: 1753946188
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: d40c7848-7417-4df7-8146-ced83c62ab96
+    tags:
+      - user
+      - api-backend
+    name: user-service
+    updated_at: 1753945941
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 8080
+    ca_certificates: ~
+    created_at: 1753945941
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: d465774d-fd1d-4aea-9043-7b4213602225
+    tags:
+      - handlefiles
+      - api-backend
+    name: handlefiles-service
+    updated_at: 1753946142
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: ~
+    port: 8087
+    ca_certificates: ~
+    created_at: 1753946142
+    protocol: http
+    host: host.docker.internal
+  - retries: 5
+    connect_timeout: 60000
+    read_timeout: 60000
+    enabled: true
+    client_certificate: ~
+    write_timeout: 60000
+    id: f2bfbbf7-f020-432b-b33f-33cad7554524
+    tags:
+      - hotel
+      - api-backend
+    name: hotel-service
+    updated_at: 1754142091
+    tls_verify: ~
+    tls_verify_depth: ~
+    path: /api/hotels
+    port: 8083
+    ca_certificates: ~
+    created_at: 1753956609
+    protocol: http
+    host: host.docker.internal
+routes:
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - chatbot
+    name: chatbot-route
+    updated_at: 1754142381
+    paths:
+      - /v1/api/chat-bot
+    service: 61d2a659-5240-4b05-b070-8890526290b5
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753946362
+    id: 32854a63-b5c0-4b19-a30c-c0f0a36a73da
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - authorization
+    name: authorization-route
+    updated_at: 1754142411
+    paths:
+      - /v1/api/authorization
+    service: b117b3f7-e708-448e-981a-95dff30b577c
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753945769
+    id: 4b043e0c-0bb2-4ef9-ad77-0c1fb56f5bea
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - hotel
+    name: hotel-route
+    updated_at: 1754142337
+    paths:
+      - /v1/api/hotels
+    service: f2bfbbf7-f020-432b-b33f-33cad7554524
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753956628
+    id: 5e0e3004-3248-4e4c-adb6-fc8184ba3b12
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - payment
+    name: payment-route
+    updated_at: 1754142426
+    paths:
+      - /v1/api/payment
+    service: b3842a14-c43b-43ee-bf67-9b91552d5bf4
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753946201
+    id: a6d520f6-9521-4464-858a-35e83946927a
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - user
+    name: user-route
+    updated_at: 1754142436
+    paths:
+      - /v1/api/user
+    service: d40c7848-7417-4df7-8146-ced83c62ab96
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753945958
+    id: bd12131b-b47d-4992-aa3a-ea96a351fc73
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - handlefiles
+    name: handlefiles-route
+    updated_at: 1754142445
+    paths:
+      - /v1/api/handlefile
+    service: d465774d-fd1d-4aea-9043-7b4213602225
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753946158
+    id: bdaeb52a-53cf-409c-aa23-5aa2d9bc4d61
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - auth
+    name: auth-route
+    updated_at: 1754142455
+    paths:
+      - /v1/api/auth
+    service: 70358580-7171-41af-8996-1a0bc9582e9a
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753945911
+    id: bec1f54a-9502-403e-99d1-8f9b8bc31072
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - booking
+    name: booking-route
+    updated_at: 1754142465
+    paths:
+      - /v1/api/booking
+    service: 0929d3ca-7920-4c59-885f-7627bb7b751c
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753946004
+    id: d18d884d-ff52-4651-80d9-ff8f1c9ef9a1
+    https_redirect_status_code: 426
+    sources: ~
+  - strip_path: true
+    path_handling: v0
+    destinations: ~
+    request_buffering: true
+    protocols:
+      - http
+      - https
+    response_buffering: true
+    methods: ~
+    headers: ~
+    snis: ~
+    tags:
+      - cms
+    name: cms-route
+    updated_at: 1754142673
+    paths:
+      - /v1/api/layouts
+    service: a2320f4b-c669-4103-b066-d66b3110e1b3
+    regex_priority: 0
+    preserve_host: false
+    hosts: ~
+    created_at: 1753946098
+    id: f796aace-45dd-4496-a5f3-4e44de2eb3f6
+    https_redirect_status_code: 426
+    sources: ~
+plugins:
+  - created_at: 1754143478
+    route: 5e0e3004-3248-4e4c-adb6-fc8184ba3b12
+    consumer: ~
+    tags: ~
+    protocols:
+      - grpc
+      - grpcs
+      - http
+      - https
+    name: jwt
+    enabled: true
+    id: 5fea785e-4f27-4b90-a556-a2cafae7732b
+    service: f2bfbbf7-f020-432b-b33f-33cad7554524
+    config:
+      header_names:
+        - authorization
+      realm: ~
+      key_claim_name: iss
+      secret_is_base64: false
+      claims_to_verify:
+        - exp
+      cookie_names: []
+      run_on_preflight: true
+      anonymous: ~
+      maximum_expiration: 86400
+      uri_param_names:
+        - jwt
+    instance_name: ~
+    updated_at: 1754145191
+jwt_secrets:
+  - consumer: f85447cf-124c-4d29-a70d-b6b1024a47ef
+    algorithm: HS256
+    key: "{{KONG_KEY_SECRET}}"
+    secret: "{{KONG_JWT_SECRET}}"
+    rsa_public_key: ~
+    tags: ~
+    created_at: 1754143555
+    id: 926f9de6-78c3-46ea-abb0-5020b20651d2
